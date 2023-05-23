@@ -6,8 +6,12 @@ from selenium.webdriver.common.keys import Keys
 from time import sleep
 
 driver = webdriver.Chrome("/Users/User/projects/python_selenium_sf/chromdriver")
-driver.get("https://google.com")
-driver.find_element(By.XPATH, "//*[@id=\"APjFqb\"]").send_keys("Skillfactiry" + Keys.RETURN)
-sleep(5)
+# driver.get("https://google.com")
+driver.get("https://www.pitomec.ru/")
 driver.save_screenshot("sf.png")
+# driver.find_element(By.XPATH, "//*[@id=\"lightbox-nav\"]").send_keys("Skillfactiry" + Keys.RETURN)
+t = driver.find_element(By.XPATH, "//*[@id=\"lightbox-nav\"]")
+# sleep(5)
+# driver.save_screenshot("sf.png")
+print(t)
 driver.quit()
